@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Transaksi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Formulir Pembelian Sepeda</h1>
+    <marquee>Isi data dengan benar untuk memproses pesanan Anda.</marquee>
+  </header>
+
+  <nav>
+    <a href="index.html">Produk</a>
+    <a href="transaksi.html">Transaksi</a>
+    <a href="tentang.html">Tentang Kami</a>
+  </nav>
+
+  <div class="form-container">
+    <h2>Data Pembeli</h2>
+    <form id="formTransaksi">
+      <label>Nama Lengkap
+        <input type="text" name="nama" required>
+      </label>
+
+      <label>Alamat Lengkap
+        <textarea name="alamat" rows="4" required></textarea>
+      </label>
+
+      <label>Pilih Produk
+        <select name="produk" required>
+          <option>Sepeda Gunung</option>
+          <option>Sepeda Lipat</option>
+          <option>Sepeda Anak</option>
+        </select>
+      </label>
+
+      <label>Jumlah Beli
+        <input type="number" name="jumlah" min="1" required>
+      </label>
+
+      <div class="payment-section">
+        <h3>Pilih Metode Pembayaran</h3>
+        <div class="payment-method">
+          <input type="radio" id="transfer" name="pembayaran" value="Transfer" checked>
+          <label for="transfer" class="payment-label">Transfer Bank</label>
+
+          <input type="radio" id="cod" name="pembayaran" value="COD">
+          <label for="cod" class="payment-label">Bayar di Tempat (COD)</label>
+        </div>
+
+        <h3 style="margin-top: 25px;">Bank yang Didukung</h3>
+        <div class="payment-logos">
+          <div class="payment-item"><img src="img/bca.png" alt="BCA"><span>BCA</span></div>
+          <div class="payment-item"><img src="img/mandiri.png" alt="Mandiri"><span>Mandiri</span></div>
+          <div class="payment-item"><img src="img/bni.png" alt="BNI"><span>BNI</span></div>
+          <div class="payment-item"><img src="img/bri.png" alt="BRI"><span>BRI</span></div>
+        </div>
+      </div>
+
+      <br><br>
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Toko Sepeda Sentosa</p>
+  </footer>
+
+</body>
+</html>
